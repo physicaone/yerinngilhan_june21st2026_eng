@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Yerinn ♥ Gilhan Are Getting Married</title>
+<meta property="og:title" content="You are invited to Yerinn & Gilhan's wedding">
+<meta property="og:description" content="June 21, 2026 (Sun) 6:00 PM · Le Hans">
+<meta property="og:image" content="https://physicaone.github.io/yerinngilhan_june21st2026/main-photo.jpg">
+<meta property="og:url" content="https://physicaone.github.io/yerinngilhan_june21st2026/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #F5F0E8;
+  --gold: #C9A96E;
+  --gold-light: #D4B896;
+  --text: #2C2420;
+  --text-light: #6B5E54;
+  --sage: #8B9D83;
+}
+
+body {
+  font-family: 'Noto Serif KR', serif;
+  background: var(--cream);
+  color: var(--text);
+  max-width: 480px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero { position: relative; width: 100%; min-height: 600px; overflow: hidden; background: url('main-photo.jpg') center 20% / cover no-repeat; background-attachment: scroll; }
+.hero-image { display: none; }
+html { overflow-anchor: none; }
+.hero-overlay { position: absolute; top: 0; left: 0; right: 0; padding: 60px 30px; background: linear-gradient(rgba(0,0,0,0.4), transparent); color: white; text-align: center; }
+.hero-overlay .date-en { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.9; margin-bottom: 16px; }
+.hero-overlay .names-en { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; letter-spacing: 3px; line-height: 1.2; }
+.hero-overlay .ampersand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px; font-weight: 300; opacity: 0.8; margin: 4px 0; }
+
+section { padding: 60px 30px; text-align: center; }
+.divider { width: 1px; height: 40px; background: var(--gold-light); margin: 0 auto 30px; }
+.section-label { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+
+.invitation { background: #FFF8F0; }
+.invitation .names-kr { font-size: 20px; font-weight: 300; letter-spacing: 8px; margin-bottom: 30px; }
+.invitation .heart { color: var(--gold); font-size: 15px; margin: 0 4px; }
+.invitation .message { font-size: 15px; font-weight: 200; line-height: 2.2; color: var(--text-light); word-break: keep-all; }
+
+.datetime { background: var(--cream); }
+.datetime .date-detail { font-size: 20px; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; }
+.calendar { margin: 30px auto 0; max-width: 300px; }
+.calendar table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.calendar th { font-weight: 300; color: var(--text-light); padding: 8px 0; font-size: 13px; letter-spacing: 1px; width: 14.28%; }
+.calendar td { padding: 6px 0; font-weight: 200; color: var(--text-light); }
+.calendar .sun { color: var(--gold); }
+.calendar .today { background: var(--gold); color: white; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-weight: 400; }
+
+.venue { background: #FFF8F0; }
+.venue .name { font-size: 20px; font-weight: 400; margin-bottom: 8px; }
+.venue .address { font-size: 15px; font-weight: 200; color: var(--text-light); line-height: 1.8; margin-bottom: 24px; }
+
+.btn { display: inline-block; padding: 12px 32px; border: 1px solid var(--gold); color: var(--gold); font-family: 'Noto Serif KR', serif; font-size: 13px; font-weight: 300; text-decoration: none; letter-spacing: 2px; transition: all 0.3s; background: transparent; cursor: pointer; border-radius: 2px; }
+.btn:hover { background: var(--gold); color: white; }
+
+.footer { padding: 40px 30px 60px; text-align: center; background: var(--cream); }
+.footer .names { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; letter-spacing: 3px; color: var(--gold); margin-bottom: 12px; }
+.footer .date { font-size: 13px; color: var(--text-light); letter-spacing: 2px; }
+
+.count-box { text-align: center; min-width: 60px; }
+.count-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+.count-label { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 2px; color: var(--text-light); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+
+/* RSVP Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: #FFF8F0;
+  border-radius: 16px;
+  padding: 36px 28px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none; border: none;
+  font-size: 20px; color: var(--text-light);
+  cursor: pointer;
+}
+
+.modal h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.modal .subtitle {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 200;
+  margin-bottom: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.form-group label .req { color: var(--gold); }
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #B8A090;
+  border-radius: 8px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 13px;
+  font-weight: 200;
+  color: var(--text);
+  background: #FFF5EA;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #C0B8B0;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.toggle-group {
+  display: flex;
+  border: 1px solid #B8A090;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggle-group button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #FFF5EA;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-group button.selected {
+  background: var(--gold);
+  color: white;
+  font-weight: 400;
+}
+
+.toggle-group button + button {
+  border-left: 1px solid #B8A090;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #B8A090;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.counter button {
+  width: 48px;
+  height: 44px;
+  border: none;
+  background: #FFF5EA;
+  font-size: 20px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.counter span {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.form-note {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 200;
+  margin-top: 4px;
+}
+
+.privacy-box {
+  background: #E8DFD4;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.privacy-box .title {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.privacy-box p {
+  font-size: 13px;
+  font-weight: 200;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-actions button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel {
+  background: white;
+  border: 1px solid #B8A090;
+  color: var(--text);
+  font-weight: 300;
+}
+
+.btn-submit {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: white;
+  font-weight: 400;
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-msg {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-msg .check {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.success-msg h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.success-msg p {
+  font-size: 13px;
+  font-weight: 200;
+  color: var(--text-light);
+}
+</style>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=78742f41f494ecb6abd6eade211ba107&autoload=false"></script>
+</head>
+<body>
+
+<div class="hero">
+  <img class="hero-image" src="main-photo.jpg" alt="Yerinn & Gilhan" decoding="async">
+  <div class="hero-overlay">
+    <div class="date-en">June 21, 2026</div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+      <span class="names-en">Yerinn</span>
+      <span class="ampersand" style="margin: 0;">&</span>
+      <span class="names-en">Gilhan</span>
+    </div>
+  </div>
+</div>
+
+<section class="invitation">
+  <div class="divider"></div>
+  <div class="section-label">Invitation</div>
+  <div class="names-kr">Yerinn <span style="color: var(--gold);">&</span> Gilhan</div>
+  <p class="message">
+    On the longest day of the year,<br>
+    to our most radiant promise,<br><br>
+    we warmly invite you<br>
+    to the beginning of our new chapter
+  </p>
+</section>
+
+<section class="datetime">
+  <div class="divider"></div>
+  <div class="section-label">When</div>
+  <div class="date-detail" style="letter-spacing: 3px;">June 21, 2026<br><span style="font-size: 15px;">Sunday 6:00 PM</span></div>
+  <div class="calendar">
+    <table>
+      <thead><tr>
+        <th class="sun">SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+      </tr></thead>
+      <tbody>
+        <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td class="sun">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+        <tr><td class="sun">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+        <tr><td class="sun"><span class="today">21</span></td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+        <tr><td class="sun">28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="timeline" style="background: var(--cream);">
+  <div class="divider"></div>
+  <div class="section-label">Order of the Day</div>
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
+    <div style="text-align: center; width: 100px;">
+      <div style="margin-bottom: 8px;"><img src="icon-reception.png" alt="Reception" style="width: 40px; height: 40px; object-fit: contain;"></div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; color: var(--gold); margin-bottom: 8px;">5:30-6:00</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; color: var(--text-light); letter-spacing: 1px;">Reception</div>
+      <div style="font-size: 13px; font-weight: 200; color: var(--text-light); margin-top: 6px;">Terrace</div>
+    </div>
+    <div style="text-align: center; width: 100px;">
+      <div style="margin-bottom: 8px;"><img src="icon-ceremony.png" alt="Ceremony" style="width: 40px; height: 40px; object-fit: contain;"></div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; color: var(--gold); margin-bottom: 8px;">6:00-7:00</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; color: var(--text-light); letter-spacing: 1px;">Wedding</div>
+      <div style="font-size: 13px; font-weight: 200; color: var(--text-light); margin-top: 6px;">Garden</div>
+    </div>
+    <div style="text-align: center; width: 100px;">
+      <div style="margin-bottom: 8px;"><img src="icon-party.png" alt="Party" style="width: 40px; height: 40px; object-fit: contain;"></div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 400; color: var(--gold); margin-bottom: 8px;">7:00-9:00</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; color: var(--text-light); letter-spacing: 1px;">Party</div>
+      <div style="font-size: 13px; font-weight: 200; color: var(--text-light); margin-top: 6px;">Garden &<br>Greenhouse</div>
+    </div>
+  </div>
+</section>
+
+<section class="venue">
+  <div class="divider"></div>
+  <div class="section-label">Where</div>
+  <div class="name">Le Hans</div>
+  <div class="address">
+    127 Jeongneung-ro 10-gil, Seongbuk-gu, Seoul
+  </div>
+  <div id="kakaoMap" style="width: 100%; height: 250px; border-radius: 8px; overflow: hidden; margin-bottom: 20px;"></div>
+  <script>
+  kakao.maps.load(function(){
+    var container = document.getElementById('kakaoMap');
+    var options = {
+      center: new kakao.maps.LatLng(37.6041320, 126.9985231),
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.6041320, 126.9985231)
+    });
+    marker.setMap(map);
+    // marker only, no label
+  });
+  </script>
+  <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://naver.me/F05kpUsF" target="_blank">Naver Map</a>
+    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://kko.to/s3NZCso9-J" target="_blank">Kakao Map</a>
+    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://tmap.life/46b23bfd" target="_blank">T Map</a>
+  </div>
+  <div class="address" style="margin-top: 24px;">
+    <span style="font-size: 13px; line-height: 2;">
+    We look forward to welcoming you on the green hillside roads of Jeongneung, by Bugaksan.<br>
+    As public transit access may be limited,<br>we prepared shuttle buses and ample parking.
+    </span>
+  </div>
+  <div class="address" style="margin-top: 24px;">
+    <span style="font-size: 13px; line-height: 2; display: block;">
+      <span style="display: block; text-align: center; margin-bottom: 2px;"><img src="icon-bus.png" alt="Bus" style="width: 22px; height: 22px;"></span>
+      <span style="white-space: nowrap; word-break: keep-all;">From the village bus stop 50m ahead of Hansung Univ. Station Exit 6</span><br>
+      Departures every 20 minutes from 5:00 PM.<br><br>
+      <span style="display: block; text-align: center; margin-bottom: 2px;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700; color: white; background: #DBBD97; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px;">P</span></span>
+      Ample dedicated parking is available.<br>Parking staff will assist you at the entrance.
+    </span>
+  </div>
+</section>
+
+<!-- D-day removed -->
+
+<!-- Dress Code -->
+<section style="background: #F0EBE3; padding: 50px 30px; text-align: center;">
+  <div class="divider"></div>
+  <div class="section-label">Dress Code</div>
+  <p style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text); letter-spacing: 2px; margin-bottom: 24px;">Summer Evening Party</p>
+  <p style="font-size: 15px; font-weight: 200; line-height: 2.2; color: var(--text-light); word-break: keep-all; text-align: center;">
+    An outdoor ceremony embraced by the breath of the forest.<br>
+    Come as you are and enjoy<br>
+    a summer evening party with us
+  </p>
+</section>
+
+<!-- RSVP Section -->
+<section class="rsvp-section" style="background: #FFF8F0;">
+  <div class="divider"></div>
+  <div class="section-label">RSVP</div>
+  <p style="font-size: 15px; font-weight: 200; line-height: 2.2; color: var(--text-light); word-break: keep-all; margin-bottom: 14px;">
+    We would be grateful to celebrate with you.<br>
+    Kindly RSVP by <strong style="color: var(--text); font-weight: 400;">May 21</strong>
+  </p>
+  <button class="btn" onclick="openRSVP()" style="padding: 14px 48px; font-size: 13px;">RSVP</button>
+  <p style="font-size: 13px; font-weight: 200; color: var(--text-light); margin-top: 14px;">With respect, we do not accept floral wreaths.</p>
+</section>
+
+<!-- Gallery -->
+<section style="background: var(--cream); padding: 50px 30px;">
+  <div class="divider"></div>
+  <div class="section-label">Gallery</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin-top: 10px;">
+    <img src="gallery-1.webp" loading="lazy" decoding="async" alt="1" onclick="openLightbox(0)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-2.webp" loading="lazy" decoding="async" alt="2" onclick="openLightbox(1)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-3.webp" loading="lazy" decoding="async" alt="3" onclick="openLightbox(2)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-4.webp" loading="lazy" decoding="async" alt="4" onclick="openLightbox(3)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-5.webp" loading="lazy" decoding="async" alt="5" onclick="openLightbox(4)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-6.webp" loading="lazy" decoding="async" alt="6" onclick="openLightbox(5)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-7.webp" loading="lazy" decoding="async" alt="7" onclick="openLightbox(6)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-8.webp" loading="lazy" decoding="async" alt="8" onclick="openLightbox(7)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-9.webp" loading="lazy" decoding="async" alt="9" onclick="openLightbox(8)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-10.webp" loading="lazy" decoding="async" alt="10" onclick="openLightbox(9)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-11.webp" loading="lazy" decoding="async" alt="11" onclick="openLightbox(10)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-12.webp" loading="lazy" decoding="async" alt="12" onclick="openLightbox(11)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-13.webp" loading="lazy" decoding="async" alt="13" onclick="openLightbox(12)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-14.webp" loading="lazy" decoding="async" alt="14" onclick="openLightbox(13)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+    <img src="gallery-15.webp" loading="lazy" decoding="async" alt="15" onclick="openLightbox(14)" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;cursor:pointer;">
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.92); z-index:2000; justify-content:center; align-items:center; flex-direction:column; touch-action:none;">
+  <button onclick="closeLightbox()" style="position:absolute; top:16px; right:16px; background:none; border:none; color:white; font-size:28px; cursor:pointer; z-index:2001;">✕</button>
+  <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+    <img id="lightboxImg" src="" style="max-width:92%; max-height:85vh; object-fit:contain; border-radius:6px; touch-action:none; -webkit-user-select:none; user-select:none;">
+  </div>
+  <div id="lightboxDots" style="position:absolute; bottom:24px; display:flex; gap:8px;"></div>
+</div>
+<script>
+(function(){
+  var imgs = ['gallery-1.webp','gallery-2.webp','gallery-3.webp','gallery-4.webp','gallery-5.webp','gallery-6.webp','gallery-7.webp','gallery-8.webp','gallery-9.webp','gallery-10.webp','gallery-11.webp','gallery-12.webp','gallery-13.webp','gallery-14.webp','gallery-15.webp'];
+  var lbIdx = 0;
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbDots = document.getElementById('lightboxDots');
+  var startX=0, diffX=0;
+
+  for(var i=0;i<imgs.length;i++){
+    var d = document.createElement('span');
+    d.style.cssText='width:8px;height:8px;border-radius:50%;background:#666;transition:background 0.3s;cursor:pointer;';
+    d.dataset.i=i;
+    d.onclick=function(){showImg(+this.dataset.i);};
+    lbDots.appendChild(d);
+  }
+
+  function showImg(i){
+    lbIdx=Math.max(0,Math.min(i,imgs.length-1));
+    lbImg.src=imgs[lbIdx];
+    for(var j=0;j<lbDots.children.length;j++) lbDots.children[j].style.background=j===lbIdx?'white':'#666';
+  }
+
+  window.openLightbox=function(i){
+    lb.style.display='flex';
+    document.body.style.overflow='hidden';
+    showImg(i);
+  };
+  window.closeLightbox=function(){
+    lb.style.display='none';
+    document.body.style.overflow='';
+  };
+
+  // Swipe only (no pinch zoom)
+  lb.addEventListener('touchstart',function(e){
+    if(e.touches.length>1){e.preventDefault();return;}
+    startX=e.touches[0].clientX;
+  },{passive:false});
+  lb.addEventListener('touchmove',function(e){
+    if(e.touches.length>1) e.preventDefault();
+  },{passive:false});
+  lb.addEventListener('touchend',function(e){
+    diffX=e.changedTouches[0].clientX-startX;
+    if(Math.abs(diffX)>50){diffX<0?showImg(lbIdx+1):showImg(lbIdx-1);}
+    diffX=0;
+  });
+
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLightbox();});
+})();
+</script>
+
+<!-- Account section removed -->
+
+<div class="footer">
+  <div class="names">Yerinn & Gilhan</div>
+  <div class="date">2026. 06. 21</div>
+</div>
+
+<!-- RSVP Modal -->
+<div class="modal-overlay" id="rsvpModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeRSVP()">✕</button>
+    
+    <!-- Form -->
+    <div id="rsvpForm">
+      <h2>RSVP</h2>
+      <p class="subtitle">Please let us know your attendance and party size for seating.</p>
+
+      <div class="form-group">
+        <label>Attendance <span class="req">*</span></label>
+        <div class="toggle-group" id="f-attend">
+          <button onclick="selectToggle(this, 'f-attend'); toggleAttend('Attending')" data-value="Attending" class="selected">Attending</button>
+          <button onclick="selectToggle(this, 'f-attend'); toggleAttend('Not Attending')" data-value="Not Attending">Not Attending</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Name <span class="req">*</span></label>
+        <input type="text" id="f-name" placeholder="Your Name">
+      </div>
+
+      <div class="form-group attend-field">
+        <label>Phone Number <span class="req">*</span></label>
+        <input type="tel" id="f-phone" placeholder="01012345678">
+      </div>
+
+      <div class="form-group attend-field">
+        <label>Affiliation (Relationship)</label>
+        <input type="text" id="f-relation" placeholder="Company or School">
+      </div>
+
+      <div class="form-group attend-field">
+        <label>Which side are you joining? <span class="req">*</span></label>
+        <div class="toggle-group" id="f-side">
+          <button onclick="selectToggle(this, 'f-side')" data-value="Bride Yerinn">Bride Yerinn</button>
+          <button onclick="selectToggle(this, 'f-side')" data-value="Groom Gilhan">Groom Gilhan</button>
+        </div>
+      </div>
+
+      <!-- allergy removed -->
+
+      <div class="form-group attend-field">
+        <label>Add Companion</label>
+        <p class="form-note" style="margin-bottom: 8px;">· Let us know if someone will accompany you.</p>
+        <div class="counter">
+          <button onclick="changeCount(-1)">−</button>
+          <span id="f-guest-count">0</span>
+          <button onclick="changeCount(1)">+</button>
+        </div>
+      </div>
+
+      <div class="form-group attend-field">
+        <label>Additional Notes</label>
+        <textarea id="f-message" placeholder="If you have anything to share, feel free to write it here."></textarea>
+      </div>
+
+      <div class="privacy-box">
+        <div class="title">Personal Information Collection & Use Notice</div>
+        <p>
+          Items collected: Name, affiliation, contact information, allergy info<br>
+          Purpose: Confirm attendance/headcount, prepare meals, and provide event guidance<br>
+          Retention period: Until July 31, 2026<br>
+          You may refuse consent to personal data collection/use. In that case, please contact the bride or groom directly to RSVP.
+        </p>
+      </div>
+
+      <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-bottom: 4px;">
+        By pressing Send below, you consent to the collection and use of personal information.
+      </p>
+
+      <div class="form-actions">
+        <button class="btn-cancel" onclick="closeRSVP()">Cancel</button>
+        <button class="btn-submit" id="submitBtn" onclick="submitRSVP()">Send</button>
+      </div>
+    </div>
+
+    <!-- Success -->
+    <div class="success-msg" id="rsvpSuccess">
+      <div class="check">💌</div>
+      <h3>Thank You!</h3>
+      <p>Your RSVP has been sent.<br>We look forward to seeing you.</p>
+      <br>
+      <button class="btn" onclick="closeRSVP()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// RSVP Modal
+function openRSVP() {
+  document.getElementById('rsvpModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeRSVP() {
+  document.getElementById('rsvpModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Attend toggle
+function toggleAttend(val) {
+  var fields = document.querySelectorAll('.attend-field');
+  fields.forEach(function(el) {
+    el.style.opacity = val === 'Not Attending' ? '0.3' : '1';
+    el.style.pointerEvents = val === 'Not Attending' ? 'none' : 'auto';
+    var inputs = el.querySelectorAll('input, textarea');
+    inputs.forEach(function(inp) { inp.disabled = val === 'Not Attending'; });
+  });
+}
+
+// Toggle buttons
+function selectToggle(btn, groupId) {
+  document.querySelectorAll('#' + groupId + ' button').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+// Guest counter
+function changeCount(delta) {
+  const el = document.getElementById('f-guest-count');
+  let val = parseInt(el.textContent) + delta;
+  if (val < 0) val = 0;
+  if (val > 10) val = 10;
+  el.textContent = val;
+}
+
+// Submit
+function submitRSVP() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  
+  if (!name || !phone) {
+    alert('Name and phone number are required.');
+    return;
+  }
+
+  const sideEl = document.querySelector('#f-side .selected');
+
+  const attendEl = document.querySelector('#f-attend .selected');
+
+  const data = {
+    attend: attendEl ? attendEl.dataset.value : '',
+    name: name,
+    phone: phone,
+    relation: document.getElementById('f-relation').value.trim(),
+    side: sideEl ? sideEl.dataset.value : '',
+    vegan: '',
+    allergy: '',
+    guests: document.getElementById('f-guest-count').textContent,
+    message: document.getElementById('f-message').value.trim(),
+    timestamp: new Date().toISOString()
+  };
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  // Google Apps Script endpoint (replace with your own)
+  const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLjaXCPv7TiPgR-1VygkPZRXOxUX4-JEZwJbouYLdHC0F362rEL57nr2NAmkXAi0Rz/exec';
+
+  fetch(ENDPOINT, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    document.getElementById('rsvpForm').style.display = 'none';
+    document.getElementById('rsvpSuccess').style.display = 'block';
+  })
+  .catch(() => {
+    alert('Failed to send. Please try again.');
+    btn.disabled = false;
+    btn.textContent = 'Send';
+  });
+}
+
+// Fix hero height (prevent KakaoTalk in-app browser resize)
+(function() {
+  var hero = document.querySelector('.hero');
+  var fixedHeight = document.documentElement.clientHeight;
+  hero.style.height = fixedHeight + 'px';
+  // Prevent ANY resize from changing hero
+  var locked = false;
+  window.addEventListener('resize', function() {
+    if (!locked) {
+      locked = true;
+      hero.style.height = fixedHeight + 'px';
+      setTimeout(function() { locked = false; }, 100);
+    }
+  });
+})();
+
+// Map: Google Maps embed
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('section').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
