@@ -11,6 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="format-detection" content="telephone=no">
+<script>document.documentElement.classList.add('font-pending');window.addEventListener('DOMContentLoaded',function(){if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){document.documentElement.classList.remove('font-pending');});}else{document.documentElement.classList.remove('font-pending');}});</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -42,6 +43,9 @@ html { overflow-anchor: none; }
 .hero-overlay .date-en { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.9; margin-bottom: 16px; }
 .hero-overlay .names-en { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; letter-spacing: 3px; line-height: 1.2; }
 .hero-overlay .ampersand { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 28px; font-weight: 300; opacity: 0.8; margin: 4px 0; }
+html.font-pending .hero-overlay .names-en,
+html.font-pending .hero-overlay .ampersand,
+html.font-pending .invitation .names-kr { visibility: hidden; }
 
 section { padding: 60px 30px; text-align: center; }
 .divider { width: 1px; height: 40px; background: var(--gold-light); margin: 0 auto 30px; }
