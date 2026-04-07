@@ -624,7 +624,6 @@ section { padding: 60px 30px; text-align: center; }
 
     <!-- Success -->
     <div class="success-msg" id="rsvpSuccess">
-      <div class="check">💌</div>
       <h3>Thank You!</h3>
       <p>Your RSVP has been sent.<br>We look forward to seeing you.</p>
       <br>
@@ -674,18 +673,28 @@ function changeCount(delta) {
 function submitRSVP() {
   const name = document.getElementById('f-name').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
-  
-  if (!name || !phone) {
-    alert('Name and phone number are required.');
+  const sideEl = document.querySelector('#f-side .selected');
+  const attendEl = document.querySelector('#f-attend .selected');
+  const attendVal = attendEl ? attendEl.dataset.value : 'Attending';
+
+  if (!name) {
+    alert('Name is required.');
     return;
   }
 
-  const sideEl = document.querySelector('#f-side .selected');
-
-  const attendEl = document.querySelector('#f-attend .selected');
+  if (attendVal === 'Attending') {
+    if (!phone) {
+      alert('Phone number is required when attending.');
+      return;
+    }
+    if (!sideEl) {
+      alert('Please select Bride/Groom side.');
+      return;
+    }
+  }
 
   const data = {
-    attend: attendEl ? attendEl.dataset.value : '',
+    attend: attendVal,
     name: name,
     phone: phone,
     relation: document.getElementById('f-relation').value.trim(),
