@@ -310,7 +310,6 @@ section { padding: 60px 30px; text-align: center; }
   color: var(--text-light);
 }
 </style>
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=78742f41f494ecb6abd6eade211ba107&autoload=false"></script>
 </head>
 <body>
 
@@ -389,26 +388,15 @@ section { padding: 60px 30px; text-align: center; }
   <div class="address">
     127 Jeongneung-ro 10-gil, Seongbuk-gu, Seoul
   </div>
-  <div id="kakaoMap" style="width: 100%; height: 250px; border-radius: 8px; overflow: hidden; margin-bottom: 20px;"></div>
-  <script>
-  kakao.maps.load(function(){
-    var container = document.getElementById('kakaoMap');
-    var options = {
-      center: new kakao.maps.LatLng(37.6041320, 126.9985231),
-      level: 3
-    };
-    var map = new kakao.maps.Map(container, options);
-    var marker = new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(37.6041320, 126.9985231)
-    });
-    marker.setMap(map);
-    // marker only, no label
-  });
-  </script>
+  <iframe
+    src="https://www.google.com/maps?q=127+Jeongneung-ro+10-gil,+Seongbuk-gu,+Seoul&output=embed"
+    style="width: 100%; height: 250px; border:0; border-radius:8px; overflow:hidden; margin-bottom:20px;"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen>
+  </iframe>
   <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
-    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://naver.me/F05kpUsF" target="_blank">Naver Map</a>
-    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://kko.to/s3NZCso9-J" target="_blank">Kakao Map</a>
-    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://tmap.life/46b23bfd" target="_blank">T Map</a>
+    <a class="btn" style="padding: 10px 20px; font-size: 13px; letter-spacing: 1px;" href="https://maps.app.goo.gl/KjQLL2qSsRaSVhfM7" target="_blank">Google Maps</a>
   </div>
   <div class="address" style="margin-top: 24px;">
     <span style="font-size: 13px; line-height: 2;">
