@@ -693,11 +693,11 @@ function submitRSVP() {
   const data = {
     attend: attendVal,
     name: name,
-    phone: phone,
-    relation: document.getElementById('f-relation').value.trim(),
-    side: sideEl ? sideEl.dataset.value : '',
-    guests: document.getElementById('f-guest-count').textContent,
-    message: document.getElementById('f-message').value.trim(),
+    phone: phone || '-',
+    relation: document.getElementById('f-relation').value.trim() || '-',
+    side: sideEl ? sideEl.dataset.value : '-',
+    guests: document.getElementById('f-guest-count').textContent || '0',
+    message: document.getElementById('f-message').value.trim() || '-',
     timestamp: new Date().toISOString()
   };
 
