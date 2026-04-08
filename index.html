@@ -675,17 +675,17 @@ function submitRSVP() {
   const attendVal = attendEl ? attendEl.dataset.value : 'Attending';
 
   if (!name) {
-    alert('Name is required.');
+    alert('Please enter your name');
     return;
   }
 
   if (attendVal === 'Attending') {
     if (!phone) {
-      alert('Phone number is required when attending.');
+      alert('Please enter your phone number');
       return;
     }
     if (!sideEl) {
-      alert('Please select Bride/Groom side.');
+      alert('Please select whose guest you are');
       return;
     }
   }
